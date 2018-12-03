@@ -2,6 +2,7 @@ package tallerprogra.fundamental;
 
 import java.util.Date;
 import java.util.List;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 public class DocenteApp {
@@ -20,15 +21,25 @@ public class DocenteApp {
 		
 		obj = new Docente(3,"Ana","Perez",new Date(),1300.15);
 		docentes.add(obj);
-		 
+		SimpleDateFormat format = new SimpleDateFormat("yyyyMMdd");
+ 
 		for(Docente o:docentes){
-			System.out.printf("ID: %d, Nombre %s, Apellido %s \n",
-					o.getId(),o.getFirstName(),o.getLastName());
+			String fecha = format.format(o.getBirthDay());
+			System.out.printf("ID: %d, Nombre %s, Apellido %s , Fecha %s \n",
+					o.getId(),o.getFirstName(),o.getLastName(),fecha);
 			
 			o.calculateAnualSalary();
+			int evaluar = Integer.parseInt(fecha);
+			if(evaluar%2==0){
+				System.out.println("PAR!!!");
+			}else{
+				System.out.println("IMPAR!!!");
+			}
+			
 			if(o.getTotalSalary() > 20000){
 				System.out.println("Tiene bono!");
 			}
+			
 		}
 	}
 
