@@ -14,6 +14,7 @@ public class Docente {
 	private String lastName;
 	private Date birthDay;
 	private Double salary;
+	private Double totalSalary;
 	
 	public Docente(int id, String firstName,String lastName,
 			Date birthDay,Double salary){
@@ -27,9 +28,18 @@ public class Docente {
 	public void calculateAnualSalary(){
 		double totalSalary = salary * (MESES_DEL_AÑO_12 + MESES_DE_AGUINALDO_2);
 		DecimalFormat f = new DecimalFormat("###,###.00");  
-		System.out.printf("El Salario es %s y el Total %s \n",f.format(salary), f.format(totalSalary));
+		System.out.printf("El Salario es %s y el Total %s \n",
+				f.format(salary), 
+				f.format(totalSalary));
+		this.totalSalary = totalSalary;
 	}
 	
+	
+	
+	public Double getTotalSalary() {
+		return totalSalary;
+	}
+
 	public Double getSalary() {
 		return salary;
 	}

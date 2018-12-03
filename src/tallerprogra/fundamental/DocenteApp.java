@@ -2,7 +2,6 @@ package tallerprogra.fundamental;
 
 import java.util.Date;
 import java.util.List;
-import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class DocenteApp {
@@ -16,7 +15,7 @@ public class DocenteApp {
 		docentes.add(obj);
 
 		
-		obj = new Docente(2,"Jose2","Perez2",new Date(),1500.10);
+		obj = new Docente(2,"Jose2","Perez2",new Date(),5000.10);
 		docentes.add(obj);
 		
 		obj = new Docente(3,"Ana","Perez",new Date(),1300.15);
@@ -25,7 +24,11 @@ public class DocenteApp {
 		for(Docente o:docentes){
 			System.out.printf("ID: %d, Nombre %s, Apellido %s \n",
 					o.getId(),o.getFirstName(),o.getLastName());
+			
 			o.calculateAnualSalary();
+			if(o.getTotalSalary() > 20000){
+				System.out.println("Tiene bono!");
+			}
 		}
 	}
 
