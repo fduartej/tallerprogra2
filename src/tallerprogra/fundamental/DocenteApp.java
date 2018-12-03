@@ -23,7 +23,7 @@ public class DocenteApp {
 		
 		for(Docente o:docentes){
 			System.out.printf("ID: %d, Nombre %s, Apellido %s \n",
-					o.getId(),obj.getFirstName(),obj.getLastName());
+					o.getId(),o.getFirstName(),o.getLastName());
 		}
 	}
 
