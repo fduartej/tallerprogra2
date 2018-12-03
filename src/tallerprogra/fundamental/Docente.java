@@ -1,5 +1,6 @@
 package tallerprogra.fundamental;
 
+import java.text.DecimalFormat;
 import java.util.Date;
 
 public class Docente {
@@ -25,7 +26,8 @@ public class Docente {
 	
 	public void calculateAnualSalary(){
 		double totalSalary = salary * (MESES_DEL_AÑO_12 + MESES_DE_AGUINALDO_2);
-		System.out.printf("El Salario Total %f \n", totalSalary);
+		DecimalFormat f = new DecimalFormat("###,###.00");  
+		System.out.printf("El Salario es %s y el Total %s \n",f.format(salary), f.format(totalSalary));
 	}
 	
 	public Double getSalary() {

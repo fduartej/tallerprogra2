@@ -2,6 +2,7 @@ package tallerprogra.fundamental;
 
 import java.util.Date;
 import java.util.List;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class DocenteApp {
@@ -20,7 +21,7 @@ public class DocenteApp {
 		
 		obj = new Docente(3,"Ana","Perez",new Date(),1300.15);
 		docentes.add(obj);
-		
+		 
 		for(Docente o:docentes){
 			System.out.printf("ID: %d, Nombre %s, Apellido %s \n",
 					o.getId(),o.getFirstName(),o.getLastName());
