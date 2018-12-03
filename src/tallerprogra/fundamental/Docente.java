@@ -1,6 +1,7 @@
 package tallerprogra.fundamental;
 
 import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Docente {
@@ -32,6 +33,18 @@ public class Docente {
 				f.format(salary), 
 				f.format(totalSalary));
 		this.totalSalary = totalSalary;
+	}
+	
+	public void evaluarFechaPar(){
+		SimpleDateFormat format = new SimpleDateFormat("yyyyMMdd");
+		String fecha = format.format(birthDay);
+		int evaluar = Integer.parseInt(fecha);
+		if(evaluar%2==0){
+			System.out.printf("Fecha %s PAR!!!\n",fecha);
+		}else{
+			System.out.printf("Fecha %s IMPAR!!!\n",fecha);
+		}
+
 	}
 	
 	
