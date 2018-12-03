@@ -16,6 +16,7 @@ public class Docente {
 	private Date birthDay;
 	private Double salary;
 	private Double totalSalary;
+	private boolean isBirthDayPar;
 	
 	public Docente(int id, String firstName,String lastName,
 			Date birthDay,Double salary){
@@ -41,14 +42,24 @@ public class Docente {
 		int evaluar = Integer.parseInt(fecha);
 		if(evaluar%2==0){
 			System.out.printf("Fecha %s PAR!!!\n",fecha);
+			isBirthDayPar = true;
 		}else{
 			System.out.printf("Fecha %s IMPAR!!!\n",fecha);
+			isBirthDayPar = false;
 		}
 
 	}
 	
 	
 	
+	public boolean isBirthDayPar() {
+		return isBirthDayPar;
+	}
+
+	public void setBirthDayPar(boolean isBirthDayPar) {
+		this.isBirthDayPar = isBirthDayPar;
+	}
+
 	public Double getTotalSalary() {
 		return totalSalary;
 	}
