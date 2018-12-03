@@ -27,8 +27,8 @@ public class DocenteApp {
 			System.out.printf("ID: %d, Nombre %s, Apellido %s , Fecha %s \n",
 					o.getId(),o.getFirstName(),o.getLastName());
 			
+			o.evaluarFechaPar();
 			o.calculateAnualSalary();
-			
 			if(o.getTotalSalary() > 20000){
 				System.out.println("Tiene bono!");
 			}
