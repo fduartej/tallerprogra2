@@ -24,7 +24,7 @@ public class DocenteApp {
 
  
 		for(Docente o:docentes){
-			System.out.printf("ID: %d, Nombre %s, Apellido %s , Fecha %s \n",
+			System.out.printf("ID: %d, Nombre %s, Apellido %s  \n",
 					o.getId(),o.getFirstName(),o.getLastName());
 			
 			o.evaluarFechaPar();
