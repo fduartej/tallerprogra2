@@ -2,12 +2,13 @@ package tallerprogra.fundamental;
 
 import java.util.Date;
 import java.util.List;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 public class DocenteApp {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ParseException {
 		// TODO Auto-generated method stub
 		List<Docente> docentes = new ArrayList<Docente>();
 		Docente obj = null;
@@ -19,7 +20,9 @@ public class DocenteApp {
 		obj = new Docente(2,"Jose2","Perez2",new Date(),5000.10);
 		docentes.add(obj);
 		
-		obj = new Docente(3,"Ana","Perez",new Date(),1300.15);
+		SimpleDateFormat format = new SimpleDateFormat("yyyyMMdd");
+		Date d = format.parse("20181205");
+		obj = new Docente(3,"Ana","Perez",d,1300.15);
 		docentes.add(obj);
 
  
