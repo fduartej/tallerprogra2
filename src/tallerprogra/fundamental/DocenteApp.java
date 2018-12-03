@@ -14,6 +14,7 @@ public class DocenteApp {
 		obj = new Docente(1,"Jose","Perez",new Date());
 		docentes.add(obj);
 
+		
 		obj = new Docente(2,"Jose2","Perez2",new Date());
 		docentes.add(obj);
 		
